@@ -1,0 +1,367 @@
+netcdf /datazone/campaign/cesm/collections/ASD/v5_rel04_BC5_ne30_g16/ocn/proc/tseries/daily/v5_rel04_BC5_ne30_g16.pop.h.nday1.SSH_2.00010101-01661231.nc {
+  dimensions:
+    time = UNLIMITED;   // (60590 currently)
+    d2 = 2;
+    z_t = 60;
+    z_t_150m = 15;
+    z_w = 60;
+    z_w_top = 60;
+    z_w_bot = 60;
+    nlat = 384;
+    nlon = 320;
+  variables:
+    double time_bound(time=60590, d2=2);
+      :long_name = "boundaries for time-averaging interval";
+      :units = "days since 0000-01-01 00:00:00";
+      :_ChunkSizes = 1, 2; // int
+
+    double time(time=60590);
+      :long_name = "time";
+      :units = "days since 0000-01-01 00:00:00";
+      :bounds = "time_bound";
+      :calendar = "noleap";
+      :_ChunkSizes = 1; // int
+
+    float z_t(z_t=60);
+      :long_name = "depth from surface to midpoint of layer";
+      :units = "centimeters";
+      :positive = "down";
+      :valid_min = 500.0f; // float
+      :valid_max = 537500.0f; // float
+      :_ChunkSizes = 60; // int
+
+    float z_t_150m(z_t_150m=15);
+      :long_name = "depth from surface to midpoint of layer";
+      :units = "centimeters";
+      :positive = "down";
+      :valid_min = 500.0f; // float
+      :valid_max = 14500.0f; // float
+      :_ChunkSizes = 15; // int
+
+    float z_w(z_w=60);
+      :long_name = "depth from surface to top of layer";
+      :units = "centimeters";
+      :positive = "down";
+      :valid_min = 0.0f; // float
+      :valid_max = 525000.94f; // float
+      :_ChunkSizes = 60; // int
+
+    float z_w_top(z_w_top=60);
+      :long_name = "depth from surface to top of layer";
+      :units = "centimeters";
+      :positive = "down";
+      :valid_min = 0.0f; // float
+      :valid_max = 525000.94f; // float
+      :_ChunkSizes = 60; // int
+
+    float z_w_bot(z_w_bot=60);
+      :long_name = "depth from surface to bottom of layer";
+      :units = "centimeters";
+      :positive = "down";
+      :valid_min = 1000.0f; // float
+      :valid_max = 549999.06f; // float
+      :_ChunkSizes = 60; // int
+
+    float dz(z_t=60);
+      :long_name = "thickness of layer k";
+      :units = "centimeters";
+      :_FillValue = 9.96921E36f; // float
+      :missing_value = 9.96921E36f; // float
+      :_ChunkSizes = 60; // int
+
+    float dzw(z_w=60);
+      :long_name = "midpoint of k to midpoint of k+1";
+      :units = "centimeters";
+      :_FillValue = 9.96921E36f; // float
+      :missing_value = 9.96921E36f; // float
+      :_ChunkSizes = 60; // int
+
+    double ULONG(nlat=384, nlon=320);
+      :long_name = "array of u-grid longitudes";
+      :units = "degrees_east";
+      :_FillValue = 9.969209968386869E36; // double
+      :missing_value = 9.969209968386869E36; // double
+      :_ChunkSizes = 384, 320; // int
+
+    double ULAT(nlat=384, nlon=320);
+      :long_name = "array of u-grid latitudes";
+      :units = "degrees_north";
+      :_FillValue = 9.969209968386869E36; // double
+      :missing_value = 9.969209968386869E36; // double
+      :_ChunkSizes = 384, 320; // int
+
+    double TLONG(nlat=384, nlon=320);
+      :long_name = "array of t-grid longitudes";
+      :units = "degrees_east";
+      :_FillValue = 9.969209968386869E36; // double
+      :missing_value = 9.969209968386869E36; // double
+      :_ChunkSizes = 384, 320; // int
+
+    double TLAT(nlat=384, nlon=320);
+      :long_name = "array of t-grid latitudes";
+      :units = "degrees_north";
+      :_FillValue = 9.969209968386869E36; // double
+      :missing_value = 9.969209968386869E36; // double
+      :_ChunkSizes = 384, 320; // int
+
+    int KMT(nlat=384, nlon=320);
+      :long_name = "k Index of Deepest Grid Cell on T Grid";
+      :coordinates = "TLONG TLAT";
+      :_FillValue = -2147483647; // int
+      :missing_value = -2147483647; // int
+      :_ChunkSizes = 384, 320; // int
+
+    int KMU(nlat=384, nlon=320);
+      :long_name = "k Index of Deepest Grid Cell on U Grid";
+      :coordinates = "ULONG ULAT";
+      :_FillValue = -2147483647; // int
+      :missing_value = -2147483647; // int
+      :_ChunkSizes = 384, 320; // int
+
+    int REGION_MASK(nlat=384, nlon=320);
+      :long_name = "basin index number (signed integers)";
+      :coordinates = "TLONG TLAT";
+      :_FillValue = -2147483647; // int
+      :missing_value = -2147483647; // int
+      :_ChunkSizes = 384, 320; // int
+
+    double UAREA(nlat=384, nlon=320);
+      :long_name = "area of U cells";
+      :units = "centimeter^2";
+      :coordinates = "ULONG ULAT";
+      :_FillValue = 9.969209968386869E36; // double
+      :missing_value = 9.969209968386869E36; // double
+      :_ChunkSizes = 384, 320; // int
+
+    double TAREA(nlat=384, nlon=320);
+      :long_name = "area of T cells";
+      :units = "centimeter^2";
+      :coordinates = "TLONG TLAT";
+      :_FillValue = 9.969209968386869E36; // double
+      :missing_value = 9.969209968386869E36; // double
+      :_ChunkSizes = 384, 320; // int
+
+    double HU(nlat=384, nlon=320);
+      :long_name = "ocean depth at U points";
+      :units = "centimeter";
+      :coordinates = "ULONG ULAT";
+      :_FillValue = 9.969209968386869E36; // double
+      :missing_value = 9.969209968386869E36; // double
+      :_ChunkSizes = 384, 320; // int
+
+    double HT(nlat=384, nlon=320);
+      :long_name = "ocean depth at T points";
+      :units = "centimeter";
+      :coordinates = "TLONG TLAT";
+      :_FillValue = 9.969209968386869E36; // double
+      :missing_value = 9.969209968386869E36; // double
+      :_ChunkSizes = 384, 320; // int
+
+    double DXU(nlat=384, nlon=320);
+      :long_name = "x-spacing centered at U points";
+      :units = "centimeters";
+      :coordinates = "ULONG ULAT";
+      :_FillValue = 9.969209968386869E36; // double
+      :missing_value = 9.969209968386869E36; // double
+      :_ChunkSizes = 384, 320; // int
+
+    double DYU(nlat=384, nlon=320);
+      :long_name = "y-spacing centered at U points";
+      :units = "centimeters";
+      :coordinates = "ULONG ULAT";
+      :_FillValue = 9.969209968386869E36; // double
+      :missing_value = 9.969209968386869E36; // double
+      :_ChunkSizes = 384, 320; // int
+
+    double DXT(nlat=384, nlon=320);
+      :long_name = "x-spacing centered at T points";
+      :units = "centimeters";
+      :coordinates = "TLONG TLAT";
+      :_FillValue = 9.969209968386869E36; // double
+      :missing_value = 9.969209968386869E36; // double
+      :_ChunkSizes = 384, 320; // int
+
+    double DYT(nlat=384, nlon=320);
+      :long_name = "y-spacing centered at T points";
+      :units = "centimeters";
+      :coordinates = "TLONG TLAT";
+      :_FillValue = 9.969209968386869E36; // double
+      :missing_value = 9.969209968386869E36; // double
+      :_ChunkSizes = 384, 320; // int
+
+    double HTN(nlat=384, nlon=320);
+      :long_name = "cell widths on North sides of T cell";
+      :units = "centimeters";
+      :coordinates = "TLONG TLAT";
+      :_FillValue = 9.969209968386869E36; // double
+      :missing_value = 9.969209968386869E36; // double
+      :_ChunkSizes = 384, 320; // int
+
+    double HTE(nlat=384, nlon=320);
+      :long_name = "cell widths on East sides of T cell";
+      :units = "centimeters";
+      :coordinates = "TLONG TLAT";
+      :_FillValue = 9.969209968386869E36; // double
+      :missing_value = 9.969209968386869E36; // double
+      :_ChunkSizes = 384, 320; // int
+
+    double HUS(nlat=384, nlon=320);
+      :long_name = "cell widths on South sides of U cell";
+      :units = "centimeters";
+      :coordinates = "ULONG ULAT";
+      :_FillValue = 9.969209968386869E36; // double
+      :missing_value = 9.969209968386869E36; // double
+      :_ChunkSizes = 384, 320; // int
+
+    double HUW(nlat=384, nlon=320);
+      :long_name = "cell widths on West sides of U cell";
+      :units = "centimeters";
+      :coordinates = "ULONG ULAT";
+      :_FillValue = 9.969209968386869E36; // double
+      :missing_value = 9.969209968386869E36; // double
+      :_ChunkSizes = 384, 320; // int
+
+    double ANGLE(nlat=384, nlon=320);
+      :long_name = "angle grid makes with latitude line";
+      :units = "radians";
+      :coordinates = "ULONG ULAT";
+      :_FillValue = 9.969209968386869E36; // double
+      :missing_value = 9.969209968386869E36; // double
+      :_ChunkSizes = 384, 320; // int
+
+    double ANGLET(nlat=384, nlon=320);
+      :long_name = "angle grid makes with latitude line on T grid";
+      :units = "radians";
+      :coordinates = "TLONG TLAT";
+      :_FillValue = 9.969209968386869E36; // double
+      :missing_value = 9.969209968386869E36; // double
+      :_ChunkSizes = 384, 320; // int
+
+    double days_in_norm_year;
+      :long_name = "Calendar Length";
+      :units = "days";
+
+    double grav;
+      :long_name = "Acceleration Due to Gravity";
+      :units = "centimeter/s^2";
+
+    double omega;
+      :long_name = "Earths Angular Velocity";
+      :units = "1/second";
+
+    double radius;
+      :long_name = "Earths Radius";
+      :units = "centimeters";
+
+    double cp_sw;
+      :long_name = "Specific Heat of Sea Water";
+      :units = "erg/g/K";
+
+    double sound;
+      :long_name = "Speed of Sound";
+      :units = "centimeter/s";
+
+    double vonkar;
+      :long_name = "von Karman Constant";
+
+    double cp_air;
+      :long_name = "Heat Capacity of Air";
+      :units = "joule/kg/degK";
+
+    double rho_air;
+      :long_name = "Ambient Air Density";
+      :units = "kg/m^3";
+
+    double rho_sw;
+      :long_name = "Density of Sea Water";
+      :units = "gram/centimeter^3";
+
+    double rho_fw;
+      :long_name = "Density of Fresh Water";
+      :units = "gram/centimeter^3";
+
+    double stefan_boltzmann;
+      :long_name = "Stefan-Boltzmann Constant";
+      :units = "watt/m^2/degK^4";
+
+    double latent_heat_vapor;
+      :long_name = "Latent Heat of Vaporization";
+      :units = "J/kg";
+
+    double latent_heat_fusion;
+      :long_name = "Latent Heat of Fusion";
+      :units = "erg/g";
+
+    double ocn_ref_salinity;
+      :long_name = "Ocean Reference Salinity";
+      :units = "g/kg";
+
+    double sea_ice_salinity;
+      :long_name = "Salinity of Sea Ice";
+      :units = "g/kg";
+
+    double T0_Kelvin;
+      :long_name = "Zero Point for Celsius";
+      :units = "degK";
+
+    double salt_to_ppt;
+      :long_name = "Convert Salt in gram/gram to g/kg";
+
+    double ppt_to_salt;
+      :long_name = "Convert Salt in g/kg to gram/gram";
+
+    double mass_to_Sv;
+      :long_name = "Convert Mass Flux to Sverdrups";
+
+    double heat_to_PW;
+      :long_name = "Convert Heat Flux to Petawatts";
+
+    double salt_to_Svppt;
+      :long_name = "Convert Salt Flux to Sverdrups*g/kg";
+
+    double salt_to_mmday;
+      :long_name = "Convert Salt to Water (millimeters/day)";
+
+    double momentum_factor;
+      :long_name = "Convert Windstress to Velocity Flux";
+
+    double hflux_factor;
+      :long_name = "Convert Heat and Solar Flux to Temperature Flux";
+
+    double fwflux_factor;
+      :long_name = "Convert Net Fresh Water Flux to Salt Flux (in model units)";
+
+    double salinity_factor;
+
+    double sflux_factor;
+      :long_name = "Convert Salt Flux to Salt Flux (in model units)";
+
+    double nsurface_t;
+      :long_name = "Number of Ocean T Points at Surface";
+
+    double nsurface_u;
+      :long_name = "Number of Ocean U Points at Surface";
+
+    float SSH_2(time=60590, nlat=384, nlon=320);
+      :long_name = "Sea Surface Height";
+      :units = "centimeter";
+      :coordinates = "TLONG TLAT time";
+      :grid_loc = "2110";
+      :cell_methods = "time: mean";
+      :_FillValue = 9.96921E36f; // float
+      :missing_value = 9.96921E36f; // float
+      :_ChunkSizes = 1, 384, 320; // int
+
+  // global attributes:
+  :title = "v5_rel04_BC5_ne30_g16";
+  :history = "none";
+  :Conventions = "CF-1.0; http://www.cgd.ucar.edu/cms/eaton/netcdf/CF-current.htm";
+  :contents = "Diagnostic and Prognostic Variables";
+  :source = "CCSM POP2, the CCSM Ocean Component";
+  :revision = "$Id: tavg.F90 41939 2012-11-14 16:37:23Z mlevy@ucar.edu $";
+  :calendar = "All years have exactly  365 days.";
+  :start_time = "This dataset was created on 2014-03-18 at 17:05:44.6";
+  :cell_methods = "cell_methods = time: mean ==> the variable values are averaged over the time interval between the previous time coordinate and the current one.          cell_methods  absent  ==> the variable values are at the time given by the current time coordinate.";
+  :nsteps_total = 24; // int
+  :tavg_sum = 64800.0; // double
+}
